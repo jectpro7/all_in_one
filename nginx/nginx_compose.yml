@@ -11,5 +11,5 @@ services:
       - "7000-7100:7000-7100"
       - "445:445"
 #    environment:
-#      - HOST=jieputech.top
+#      - HOST=$SERVER_NAME
 #      - PORT=80
