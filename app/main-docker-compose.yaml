@@ -1,28 +1,6 @@
 version: '3.5'
 
 services:
-  koodo:
-    container_name: koodo
-    image: ject7pro/koodo-reader
-    ports:
-      - "777:80/tcp"
-    restart: always
-  calibre-web:
-    image: lscr.io/linuxserver/calibre-web:latest
-    container_name: calibre-web
-    privileged: true
-    environment:
-      - PUID=0
-      - PGID=0
-      - TZ=Asia/Shanghai
-      - DOCKER_MODS=linuxserver/mods:universal-calibre #optional
-      - OAUTHLIB_RELAX_TOKEN_SCOPE=1 #optional
-    volumes:
-      - /mnt/app_data/calibre/config:/config
-      - /mnt/public/books/books:/books
-    ports:
-      - "8083:8083"
-    restart: always
   adgurad:
     container_name: adgurad
     image: adguard/adguardhome
