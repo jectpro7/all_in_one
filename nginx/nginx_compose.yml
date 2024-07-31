@@ -1,0 +1,15 @@
+version: '3.5'
+#  docker pull nginxinc/nginx-unprivileged
+services:
+  web:
+    image: nginx
+    container_name: nginx
+    restart: always
+    volumes:
+      - /root/nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "7000-7100:7000-7100"
+      - "445:445"
+#    environment:
+#      - HOST=jieputech.top
+#      - PORT=80
